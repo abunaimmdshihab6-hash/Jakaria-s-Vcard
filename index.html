@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakaria Hasnat Jain | Digital Card</title>
+    
+    <meta name="description" content="Digital Business Card of Jakaria Hasnat Jain. Connect via Phone, Email, WhatsApp, and Social Media.">
+    <meta property="og:title" content="Jakaria Hasnat Jain | Digital Identity">
+    <meta property="og:description" content="Tap to connect with Jakaria Hasnat Jain.">
+    <meta property="og:image" content="profile.jpg">
+    <meta property="og:type" content="website">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Jain Card">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="card-container fade-in">
+        
+        <div class="nfc-badge">
+            <i class="fa-solid fa-wifi nfc-icon"></i> NFC Contact Active
+        </div>
+
+        <div class="profile-section">
+            <div class="avatar-wrapper">
+                <img src="profile.jpg" alt="Jakaria Hasnat Jain" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
+                <div class="pulse-ring"></div>
+            </div>
+            <h1>Jakaria Hasnat Jain</h1>
+            <p class="subtitle">Student</p>
+        </div>
+
+        <div class="quick-actions">
+            <a href="tel:01518997164" class="action-btn" title="Call Primary"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/8801518997164" target="_blank" class="action-btn whatsapp-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:jakariahasnat2008@gmail.com" class="action-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="vcard.vcf" class="action-btn save-btn" title="Save Contact"><i class="fa-solid fa-user-plus"></i></a>
+        </div>
+
+        <div class="info-box">
+            <div class="info-item" onclick="copyToClipboard('01518997164', 'Phone Number copied!')">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div class="info-text">
+                    <span>01518997164</span>
+                    <small>Tap to copy number</small>
+                </div>
+            </div>
+            
+            <div class="info-item" onclick="copyToClipboard('jakariahasnat2008@gmail.com', 'Email copied!')">
+                <i class="fa-solid fa-envelope-open"></i>
+                <div class="info-text">
+                    <span>jakariahasnat2008@gmail.com</span>
+                    <small>Tap to copy email</small>
+                </div>
+            </div>
+
+            <div class="info-item" onclick="window.open('https://t.me/+8801732509933', '_blank')">
+                <i class="fa-brands fa-telegram" style="color: #8AB9F1;"></i>
+                <div class="info-text">
+                    <span>Telegram Connect</span>
+                    <small>Tap to open direct chat</small>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Social Matrix</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/18qnqHrPNV/" target="_blank" class="social-card fb">
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/jakaria_3711" target="_blank" class="social-card insta">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </div>
+
+        <div class="qr-section">
+            <button id="qr-toggle-btn" class="qr-btn">Show Live QR Network</button>
+            <div id="qr-container" class="hidden">
+                <img id="qr-image" src="" alt="Dynamic Secure QR">
+                <p>Scan to instantly sync profile</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Designed for <strong>Jakaria Hasnat Jain</strong></p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast-hidden">Copied to System Clipboard</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
