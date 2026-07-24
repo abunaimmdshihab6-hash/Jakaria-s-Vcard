@@ -1,0 +1,301 @@
+:root {
+    /* Custom Luxury Cyber Blue Texture Base Shader Matrix */
+    --bg-gradient: linear-gradient(-45deg, #090e17, #0f1c2e, #162c47, #090e17);
+    --glass-bg: rgba(138, 185, 241, 0.03);
+    --glass-border: rgba(138, 185, 241, 0.12);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #8AB9F1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-size: 400% 400%;
+    animation: gradientBG 18s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    padding: 24px;
+    position: relative;
+}
+
+/* Premium micro-dot noise glass screen texture effect overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(var(--accent) 0.6px, transparent 0.6px);
+    background-size: 24px 24px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* System Engine Loading State Screen UI */
+#loader {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #090e17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid rgba(138, 185, 241, 0.1);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Main Dynamic Fluid Glass Engine Enclosure */
+.card-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+    width: 100%;
+    max-width: 400px;
+    padding: 32px 24px;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Radiant NFC Connectivity Mesh Tracker */
+.nfc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(138, 185, 241, 0.08);
+    border: 1px solid rgba(138, 185, 241, 0.2);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.nfc-icon {
+    animation: softPulse 2s infinite ease-in-out;
+}
+@keyframes softPulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Portrait Core Interface Layout elements */
+.avatar-wrapper {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    margin: 0 auto 16px;
+}
+.profile-img {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(138, 185, 241, 0.25);
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    color: #ffffff;
+}
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 6px;
+    margin-bottom: 28px;
+    letter-spacing: 0.3px;
+}
+
+/* Grid Matrix Action Ports */
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+.action-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.action-btn:hover {
+    transform: translateY(-4px);
+    background: var(--text-primary);
+    color: #090e17;
+    box-shadow: 0 8px 20px rgba(138, 185, 241, 0.2);
+}
+.whatsapp-btn:hover { background: #22c55e !important; color: #fff !important; box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3) !important; }
+.save-btn { background: var(--accent); color: #090e17; border: none; font-weight: bold; }
+.save-btn:hover { background: #b0d2ff; color: #090e17; }
+
+/* Dynamic Multi-Channel Link Modules Block */
+.info-box {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    padding: 8px;
+    margin-bottom: 28px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 12px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: background 0.25s ease;
+}
+.info-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.info-item:hover {
+    background: rgba(138, 185, 241, 0.05);
+}
+.info-item i {
+    color: var(--accent);
+    font-size: 1.15rem;
+    width: 24px;
+    text-align: center;
+}
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+.info-text span { font-size: 0.92rem; font-weight: 500; letter-spacing: 0.2px; }
+.info-text small { font-size: 0.76rem; color: var(--text-secondary); margin-top: 2px; }
+
+/* Interactive Secondary Social Layer Blocks */
+.section-title {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: left;
+    margin-bottom: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.96rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.social-card i { font-size: 1.25rem; width: 24px; text-align: center; }
+.social-card:hover {
+    transform: scale(1.015);
+    box-shadow: inset 0 0 12px rgba(138, 185, 241, 0.08);
+}
+.fb:hover { background: rgba(24, 119, 242, 0.15); border-color: #1877f2; color: #1877f2; }
+.insta:hover { background: rgba(220, 39, 67, 0.12); border-color: #cc2366; color: #ff4b72; }
+
+/* Dynamic Engine Secondary Scanning QR Modules Container */
+.qr-section { margin-top: 16px; }
+.qr-btn {
+    background: none; border: none;
+    color: var(--text-secondary);
+    font-size: 0.85rem; cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.2px;
+}
+.qr-btn:hover { color: var(--accent); text-decoration: underline; }
+#qr-container {
+    margin-top: 16px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s ease;
+}
+#qr-container img { width: 140px; height: 140px; display: block; }
+#qr-container p { color: #0f1c2e; font-size: 0.75rem; margin-top: 10px; font-weight: 700; }
+.hidden { display: none !important; }
+
+/* Standard Architecture System Footer */
+footer {
+    margin-top: 28px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 18px;
+    letter-spacing: 0.4px;
+}
+footer strong { color: var(--accent); font-weight: 500; }
+
+/* Toast Notification Core Window Platform */
+#toast {
+    position: fixed;
+    bottom: 36px; left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #090e17;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 0.9rem; font-weight: 600;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transition: opacity 0.3s elements, bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 99999;
+}
+.toast-hidden { opacity: 0; pointer-events: none; bottom: 12px !important; }
+
+/* Engine Visual Rendering Animations Pipeline */
+.fade-in { animation: fadeIn 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
